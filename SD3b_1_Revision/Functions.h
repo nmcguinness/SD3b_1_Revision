@@ -23,3 +23,19 @@ void swap(int x, int y) {
     y = x;
     x = temp;
 }
+
+//EX - 3
+void swap_ref(int& x, int& y)
+{
+    int temp = y;
+    y = x;
+    x = temp;
+}
+
+//EX - 4
+void swap_ptr(int* px, int* py)
+{
+    int* ptemp = py;
+    py = px;
+    px = ptemp;
+}
