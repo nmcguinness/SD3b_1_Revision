@@ -1,6 +1,7 @@
 // SD3b_1_Revision.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
 #include <iostream>
+#include "Functions.h"
 
 //int add(int x, int y); //declaration
 
