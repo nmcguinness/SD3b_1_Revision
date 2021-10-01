@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="SD3b_1_Revision.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Functions.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
