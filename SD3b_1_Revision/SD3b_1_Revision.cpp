@@ -51,4 +51,16 @@ int main()
 	//demo showing how to instantiate and iterate
 	cout << "instantiateArray_Demo2" << endl;
 	instantiateArray_Demo2();
+
+	//demo getSum
+	int* pGrades = new int[3]; //pIntArray is a pointer to 1st address in array
+	pGrades[0] = 99;
+	pGrades[1] = 40;
+	pGrades[2] = 65;
+
+	int length = 3;// sizeof(*pGrades) / sizeof(pGrades[0]);
+	int sum = getSum(pGrades, length);
+	cout << "Sum of all values is " << sum << endl;
+
+	delete[] pGrades;
 }

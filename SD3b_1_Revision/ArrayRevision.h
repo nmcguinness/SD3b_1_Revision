@@ -35,6 +35,8 @@ void instantiateArray_Demo3()
 	pIntArray[1] = 2021;
 	pIntArray[2] = 2022;
 	pIntArray[3] = 2023;
+
+	delete[] pIntArray;
 }
 
 int getSum(int* pArray, int length) {
