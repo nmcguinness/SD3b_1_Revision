@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "Functions.h"
+#include "ArrayRevision.h"
 
 //int add(int x, int y); //declaration
 
@@ -38,4 +39,16 @@ int main()
 	int test = 34;
 	int* pTest = &test;
 	std::cout << "Address of pTest: " << pTest << std::endl;
+
+	/************************** Using Arrays ******************************/
+
+	cout << endl;
+
+	//demo showing how to instantiate and access
+	cout << "instantiateArray_Demo1" << endl;
+	instantiateArray_Demo1();
+
+	//demo showing how to instantiate and iterate
+	cout << "instantiateArray_Demo2" << endl;
+	instantiateArray_Demo2();
 }

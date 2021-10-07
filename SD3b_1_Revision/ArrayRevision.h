@@ -26,3 +26,7 @@ void instantiateArray_Demo2()
 	for (int i = 0; i < length; i++)
 		cout << ages[i] << endl;
 }
+
+void instantiateArray_Demo3()
+{
+}
