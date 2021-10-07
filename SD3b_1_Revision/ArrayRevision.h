@@ -29,4 +29,19 @@ void instantiateArray_Demo2()
 
 void instantiateArray_Demo3()
 {
+	int* pIntArray = new int[4]; //pIntArray is a pointer to 1st address in array
+
+	pIntArray[0] = 2020;
+	pIntArray[1] = 2021;
+	pIntArray[2] = 2022;
+	pIntArray[3] = 2023;
+}
+
+int getSum(int* pArray, int length) {
+	int sum = 0;
+	for (int i = 0; i < length; i++)
+	{
+		sum += pArray[i];
+	}
+	return sum;
 }
