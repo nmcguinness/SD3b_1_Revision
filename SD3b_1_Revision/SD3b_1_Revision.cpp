@@ -52,6 +52,9 @@ int main()
 	cout << "instantiateArray_Demo2" << endl;
 	instantiateArray_Demo2();
 
+	/************************** Exercise 1 ******************************/
+	cout << endl;
+
 	//demo getSum
 	int* pGrades = new int[3]; //pIntArray is a pointer to 1st address in array
 	pGrades[0] = 99;
@@ -62,5 +65,28 @@ int main()
 	int sum = getSum(pGrades, length);
 	cout << "Sum of all values is " << sum << endl;
 
+	//Do NOT forget to de-allocate the space we created for the array - Memory leak!!!
 	delete[] pGrades;
+
+	/************************** Exercise 2 ******************************/
+	cout << endl;
+
+	int x = 60;
+	int y = 100;
+
+	int* pX = &x; //remember a pointer stores address so use & to get variable address
+	int* pY = &y;
+
+	cout << "(pre-swap) pX address:" << pX << endl;
+	cout << "(pre-swap) pY address:" << pY << endl;
+
+	//try using the function that passes pointers by COPY - does it work?
+	//swap_not_working(pX, pY);
+
+	swap(pX, pY);
+	cout << "(post-swap) pX address:" << pX << endl;
+	cout << "(post-swap) pY address:" << pY << endl;
+
+	cout << "pX stores:" << *pX << endl; //using * we are going to the address pointed to by pX
+	cout << "pY stores:" << *pY << endl;
 }

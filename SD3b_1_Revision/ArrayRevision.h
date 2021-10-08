@@ -52,17 +52,59 @@ int getSum(int* pArray, int length) {
 	return sum;
 }
 
-/// @brief Swaps values stored (addresses) in two pointers to integers
+/// @brief Swaps a COPY of the values stored (addresses) in two pointers to integers
 /// @param pA Address of first int
 /// @param pB Address of second int
-void swap(int* pA, int* pB) {
+void swap_not_working(int* pA, int* pB) { //a swap with this method signature passes pointer by value (copy) only
 	int* pTemp = pB;
 	pB = pA;
 	pA = pTemp;
 }
 
-void swap(float* pA, float* pB) {
+/// @brief Swaps values stored (addresses) in two pointers to integers
+/// @param pA Address of first int
+/// @param pB Address of second int
+void swap(int*& pA, int*& pB) { //a swap with this method signature passed a reference to the pointer
+	int* pTemp = pB;
+	pB = pA;
+	pA = pTemp;
+}
+
+//note we would also have to write many overloaded flavours. Is this right? Template/generic?
+void swap(float*& pA, float*& pB) {
 	float* pTemp = pB;
 	pB = pA;
 	pA = pTemp;
+}
+
+//double getMax(const double*& pArray, int length) {
+//
+//	if (length == 0)
+//		return 0;
+//
+//	double max = -1;
+//
+//	for (int i = 0; i < length; i++) {
+//		if (max < pArray[i]) {
+//			max = pArray[i];
+//		}
+//	}
+//
+//	return max;
+//}
+
+double* getMax(double*& pArray, int length) {
+	if (length == 0)
+		return nullptr;
+
+	double max = -1;
+	double* pMax = &max;
+
+	for (int i = 0; i < length; i++) {
+		if (*pMax < pArray[i]) {
+			pMax = pArray + i;
+		}
+	}
+
+	return pMax;
 }
