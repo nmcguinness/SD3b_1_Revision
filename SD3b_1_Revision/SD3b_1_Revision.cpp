@@ -97,7 +97,7 @@ int main()
 	pChocolateConsumption[0] = 1.5;
 	pChocolateConsumption[1] = 1.75;
 	pChocolateConsumption[2] = 5.61;
-	pChocolateConsumption[3] = -3.45;
+	pChocolateConsumption[3] = 3.45;
 	pChocolateConsumption[4] = 1.00092;
 
 	double* pMax = getMax(pChocolateConsumption, 5);

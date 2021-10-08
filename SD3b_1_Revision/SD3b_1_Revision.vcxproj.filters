@@ -26,5 +26,8 @@
     <ClInclude Include="ArrayRevision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RecursionRevision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

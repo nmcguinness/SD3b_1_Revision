@@ -102,7 +102,7 @@ double* getMax(double*& pArray, int length) {
 
 	for (int i = 0; i < length; i++) {
 		if (*pMax < pArray[i]) {
-			pMax = pArray + i;
+			pMax = pArray + i; //pArray + i => base address + i * sizeof(double)
 		}
 	}
 

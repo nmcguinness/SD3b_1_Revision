@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="ArrayRevision.h" />
     <ClInclude Include="Functions.h" />
+    <ClInclude Include="RecursionRevision.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
