@@ -1,6 +1,10 @@
 #pragma once
 
-/// @brief Returns 2^exponent
+//max, min
+void getMinMax(int* pArray, int length, int position, int& min, int& max) {
+}
+
+/// @brief Exercise 5 - Returns 2^exponent
 /// @param exponent Integer, where exponent >= 0 and is an integer
 /// @return Integer 2^exponent
 int power(int exponent) { //3
