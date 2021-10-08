@@ -109,12 +109,17 @@ int main()
 	/************************** Revision - Recursion - Exercise 2 ******************************/
 	cout << endl;
 
-	int goalsArray[] = { 5, 0, 7, 1, 4, 8 };
+	int goalsArray[] = { 5, 0, 7, 1, 4, 8, 100000 };
 	int min = INT_MAX;  //100000
 	int max = INT_MIN;  //-1
 
-	getMinMax(goalsArray, 6, 0, min, max);
+	getMinMax(nullptr, 7, 0, min, max);
 
 	cout << "Min: " << min << endl;
 	cout << "Max: " << max << endl;
+
+	/************************** Revision - Recursion - Exercise 5 ******************************/
+	cout << endl;
+
+	//to do...
 }

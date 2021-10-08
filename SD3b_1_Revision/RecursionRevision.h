@@ -2,6 +2,9 @@
 
 //max, min
 void getMinMax(int* pArray, int length, int position, int& min, int& max) {
+	if (pArray == nullptr)
+		return;
+
 	//if you are at the end then stop/return
 	if (position == length)
 		return;
