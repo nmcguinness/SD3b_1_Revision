@@ -2,7 +2,18 @@
 
 //max, min
 void getMinMax(int* pArray, int length, int position, int& min, int& max) {
-	min = 10000;
+	//if you are at the end then stop/return
+	if (position == length)
+		return;
+
+	//else if the current number is < min then set, and > max then set
+	if (min > pArray[position])
+		min = pArray[position];
+
+	if (max < pArray[position])
+		max = pArray[position];
+
+	getMinMax(pArray, length, position + 1, min, max);
 }
 
 /// @brief Exercise 5 - Returns 2^exponent
