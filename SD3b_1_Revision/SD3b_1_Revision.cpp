@@ -52,7 +52,7 @@ int main()
 	cout << "instantiateArray_Demo2" << endl;
 	instantiateArray_Demo2();
 
-	/************************** Exercise 1 ******************************/
+	/************************** Revision - Pointers & Dynamic Memory - Exercise 1 ******************************/
 	cout << endl;
 
 	//demo getSum
@@ -68,7 +68,7 @@ int main()
 	//Do NOT forget to de-allocate the space we created for the array - Memory leak!!!
 	delete[] pGrades;
 
-	/************************** Exercise 2 ******************************/
+	/************************** Revision - Pointers & Dynamic Memory - Exercise 2 ******************************/
 	cout << endl;
 
 	int x = 60;
@@ -89,4 +89,17 @@ int main()
 
 	cout << "pX stores:" << *pX << endl; //using * we are going to the address pointed to by pX
 	cout << "pY stores:" << *pY << endl;
+
+	/************************** Revision - Pointers & Dynamic Memory - Exercise 5 ******************************/
+	cout << endl;
+
+	double* pChocolateConsumption = new double[5];
+	pChocolateConsumption[0] = 1.5;
+	pChocolateConsumption[1] = 1.75;
+	pChocolateConsumption[2] = 5.61;
+	pChocolateConsumption[3] = -3.45;
+	pChocolateConsumption[4] = 1.00092;
+
+	double* pMax = getMax(pChocolateConsumption, 5);
+	cout << "Max chocolate consumption for all participants: " << *pMax << endl;
 }
