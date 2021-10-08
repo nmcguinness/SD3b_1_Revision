@@ -58,7 +58,7 @@ int main()
 	pGrades[1] = 40;
 	pGrades[2] = 65;
 
-	int length = 3;// sizeof(*pGrades) / sizeof(pGrades[0]);
+	int length = 3; // sizeof(*pGrades) / sizeof(pGrades[0]);
 	int sum = getSum(pGrades, length);
 	cout << "Sum of all values is " << sum << endl;
 

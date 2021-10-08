@@ -21,7 +21,7 @@ void instantiateArray_Demo2()
 
 	//ages.length //Eeeek! No length property in C++
 
-	int length = sizeof(ages) / sizeof(ages[0]);
+	int length = sizeof(ages) / sizeof(ages[0]); //12 / 4 = 3
 
 	for (int i = 0; i < length; i++)
 		cout << ages[i] << endl;
@@ -39,6 +39,10 @@ void instantiateArray_Demo3()
 	delete[] pIntArray;
 }
 
+/// @brief Exercise 1 - Solution - Get sum of array of ints
+/// @param pArray Address of first element
+/// @param length Total number of elements
+/// @return Integer sum
 int getSum(int* pArray, int length) {
 	int sum = 0;
 	for (int i = 0; i < length; i++)
@@ -46,4 +50,19 @@ int getSum(int* pArray, int length) {
 		sum += pArray[i];
 	}
 	return sum;
+}
+
+/// @brief Swaps values stored (addresses) in two pointers to integers
+/// @param pA Address of first int
+/// @param pB Address of second int
+void swap(int* pA, int* pB) {
+	int* pTemp = pB;
+	pB = pA;
+	pA = pTemp;
+}
+
+void swap(float* pA, float* pB) {
+	float* pTemp = pB;
+	pB = pA;
+	pA = pTemp;
 }
