@@ -2,6 +2,7 @@
 
 //max, min
 void getMinMax(int* pArray, int length, int position, int& min, int& max) {
+	min = 10000;
 }
 
 /// @brief Exercise 5 - Returns 2^exponent

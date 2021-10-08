@@ -1,8 +1,10 @@
 // SD3b_1_Revision.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
 #include <iostream>
+#include <limits>
 #include "Functions.h"
 #include "ArrayRevision.h"
+#include "RecursionRevision.h"
 
 //int add(int x, int y); //declaration
 
@@ -102,4 +104,17 @@ int main()
 
 	double* pMax = getMax(pChocolateConsumption, 5);
 	cout << "Max chocolate consumption for all participants: " << *pMax << endl;
+	delete[] pChocolateConsumption;
+
+	/************************** Revision - Recursion - Exercise 2 ******************************/
+	cout << endl;
+
+	int goalsArray[] = { 5, 0, 7, 1, 4, 8 };
+	int min = INT_MAX;  //100000
+	int max = INT_MIN;  //-1
+
+	getMinMax(goalsArray, 6, 0, min, max);
+
+	cout << "Min: " << min << endl;
+	cout << "Max: " << max << endl;
 }
