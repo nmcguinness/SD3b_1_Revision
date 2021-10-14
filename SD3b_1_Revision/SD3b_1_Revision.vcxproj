@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Flower.cpp" />
     <ClCompile Include="SD3b_1_Revision.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayRevision.h" />
+    <ClInclude Include="Flower.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="RecursionRevision.h" />
   </ItemGroup>
