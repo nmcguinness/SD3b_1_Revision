@@ -18,8 +18,28 @@ public:
 
 	string getName() const;
 	double getPrice() const;
-	bool operator==(Flower other);
+	bool operator==(const Flower& other);
+
+	//cout << f1;
+	friend ostream& operator<<(ostream& out, const Flower& flower);
 };
+
+//cout << f1 << "," << f2 << ...
+ostream& operator<<(ostream& out, const Flower& flower) {
+	out << flower.name;
+	cout << ",";
+	out << flower.petals;
+	cout << ",";
+	out << flower.price;
+	return out;
+}
+
+bool Flower::operator==(const Flower& other)
+{
+	return this->name == other.getName()
+		//TODO - comparing two doubles!
+		&& this->price == other.getPrice();
+}
 
 string Flower::getName() const {
 	return this->name;
