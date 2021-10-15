@@ -10,10 +10,16 @@
 //declarations
 void demoSwap();
 void classesQuestion2();
+void classesQuestion3();
+void classesQuestion4();
+void classesQuestion5();
 
 int main()
 {
-	classesQuestion2();
+	//classesQuestion2();
+	//classesQuestion3();
+	classesQuestion4();
+	//classesQuestion5();
 
 	/************************** Pass-by-copy and by-reference ******************************/
 	demoSwap();
@@ -135,14 +141,25 @@ void classesQuestion2() {
 
 void classesQuestion3() {
 	cout << endl;
+	Flower f1("petunia", 4, 1.50);
+	Flower f2("lily", 8, 4.50);
+	cout << f1 << "," << f2 << endl;
 }
 
 void classesQuestion4() {
 	cout << endl;
+	Flower f1("petunia", 4, 1.50);
+	cout << f1 << endl;
+	f1 + 50;
+	cout << f1 << endl;
 }
 
 void classesQuestion5() {
 	cout << endl;
+	Flower f1("petunia", 4, 1.50);
+	cout << f1 << endl;
+	f1++;
+	cout << f1 << endl;
 }
 
 /************************** Revision - Pointers & Dynamic Memory ******************************/

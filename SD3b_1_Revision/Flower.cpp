@@ -17,8 +17,13 @@ void Flower::operator+(double delta) {
 }
 
 //question 5
-//post-increment (x++), pre-increment(++x)
+//pre-increment(++x)
 void Flower::operator++() {
+	this->petals++;
+}
+
+//post-increment (x++)
+void Flower::operator++(int x) {
 	this->petals++;
 }
 

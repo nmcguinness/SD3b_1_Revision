@@ -21,6 +21,11 @@ public:
 	bool operator==(const Flower& other);
 	void operator+(double delta);
 	void operator++();
+	void operator++(int x);
+
+	//f1 += 2.5
+	void operator+=(double delta);
+	bool operator!=(const Flower& other);
 
 	//friend methods break encapsulation
 	friend ostream& operator<<(ostream& out, const Flower& flower);
