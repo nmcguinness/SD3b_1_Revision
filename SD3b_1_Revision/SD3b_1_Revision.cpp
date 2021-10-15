@@ -5,12 +5,16 @@
 #include "Functions.h"
 #include "ArrayRevision.h"
 #include "RecursionRevision.h"
+#include "Flower.h"
 
 //declarations
 void demoSwap();
+void classesQuestion2();
 
 int main()
 {
+	classesQuestion2();
+
 	/************************** Pass-by-copy and by-reference ******************************/
 	demoSwap();
 
@@ -125,6 +129,8 @@ void recursionQuestion5()
 /************************** Revision - Classes & Operator Overloading ******************************/
 void classesQuestion2() {
 	cout << endl;
+	Flower f1("petunia", 4, 1.50);
+	cout << f1.getName() << "," << f1.getPrice() << endl;
 }
 
 void classesQuestion3() {
