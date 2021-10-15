@@ -4,7 +4,7 @@ using namespace std;
 
 //add in some functions to remind us how to use arrays
 
-void instantiateArray_Demo1()
+void demoArrayInstantiation1()
 {
 	int ages[3];		//defining
 	ages[0] = 18;
@@ -15,7 +15,7 @@ void instantiateArray_Demo1()
 	cout << ages[2] << endl;
 }
 
-void instantiateArray_Demo2()
+void demoArrayInstantiation2()
 {
 	int ages[3] = { 21,22,23 }; //definining and initializing
 
@@ -27,7 +27,7 @@ void instantiateArray_Demo2()
 		cout << ages[i] << endl;
 }
 
-void instantiateArray_Demo3()
+void demoArrayInstantiationPounter()
 {
 	int* pIntArray = new int[4]; //pIntArray is a pointer to 1st address in array
 

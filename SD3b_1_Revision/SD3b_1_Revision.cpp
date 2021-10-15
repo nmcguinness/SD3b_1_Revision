@@ -6,10 +6,34 @@
 #include "ArrayRevision.h"
 #include "RecursionRevision.h"
 
-//int add(int x, int y); //declaration
+//declarations
+void demoSwap();
 
 int main()
 {
+	/************************** Pass-by-copy and by-reference ******************************/
+	demoSwap();
+
+	/************************** Using Arrays ******************************/
+
+	cout << endl;
+
+	//demo showing how to instantiate and access
+	cout << "demoArrayInstantiation1" << endl;
+	demoArrayInstantiation1();
+
+	//demo showing how to instantiate and iterate
+	cout << "demoArrayInstantiation2" << endl;
+	demoArrayInstantiation2();
+
+	//demo showing how to instantiate using pointer
+	cout << "demoArrayInstantiationPounter" << endl;
+	demoArrayInstantiationPounter();
+}
+
+/************************** Revision - Pass-by-copy, Pass-by-reference & Arrays ******************************/
+
+void demoSwap() {
 	//test add
 	std::cout << "Add: " << add(3, 2) << std::endl;
 
@@ -41,20 +65,83 @@ int main()
 	int test = 34;
 	int* pTest = &test;
 	std::cout << "Address of pTest: " << pTest << std::endl;
+}
 
-	/************************** Using Arrays ******************************/
+/************************** Revision - Recursion ******************************/
 
+void recursionQuestion1()
+{
 	cout << endl;
+	string input;
+	do
+	{
+		cout << "Please enter a word, exit to quit.";
+		cin >> input;
+		if (input != "exit")
+		{
+			string msg = isPalindrome(input) ? input + " is a palindrome" : input + " is NOT a palindrome";
+			cout << msg << endl;
+		}
+	} while (input != "exit");
+}
 
-	//demo showing how to instantiate and access
-	cout << "instantiateArray_Demo1" << endl;
-	instantiateArray_Demo1();
+void recursionQuestion2()
+{
+	cout << endl;
+	int arr[] = { 1,2,3,4,-5,6,7,8,9,10 };
+	int min, max;
+	min = arr[0];
+	max = arr[0];
+	getMinMax(arr, 10, 0, min, max);
+	cout << "The minimum value is " << min << endl;
+	cout << "The maximum value is " << max << endl;
+}
 
-	//demo showing how to instantiate and iterate
-	cout << "instantiateArray_Demo2" << endl;
-	instantiateArray_Demo2();
+void recursionQuestion3()
+{
+	cout << endl;
+	string s;
+	cout << "Please enter a string " << endl;
+	getline(cin, s);
+	cout << s << " Reversed is " << reverse(s) << endl;
+}
+void recursionQuestion4()
+{
+	cout << endl;
+	string s;
+	cout << "Please enter a number " << endl;
+	getline(cin, s);
+	cout << s << " as int is " << getNumber(s) << endl;
+}
 
-	/************************** Revision - Pointers & Dynamic Memory - Exercise 1 ******************************/
+void recursionQuestion5()
+{
+	int i;
+	cout << "Which value would you like to find 2 to the power of? ";
+	cin >> i;
+	cout << "2 to the power of " << i << " is " << power(i) << endl;
+}
+
+/************************** Revision - Classes & Operator Overloading ******************************/
+void classesQuestion2() {
+	cout << endl;
+}
+
+void classesQuestion3() {
+	cout << endl;
+}
+
+void classesQuestion4() {
+	cout << endl;
+}
+
+void classesQuestion5() {
+	cout << endl;
+}
+
+/************************** Revision - Pointers & Dynamic Memory ******************************/
+
+void pointersQuestion1() {
 	cout << endl;
 
 	//demo getSum
@@ -69,8 +156,9 @@ int main()
 
 	//Do NOT forget to de-allocate the space we created for the array - Memory leak!!!
 	delete[] pGrades;
+}
 
-	/************************** Revision - Pointers & Dynamic Memory - Exercise 2 ******************************/
+void pointersQuestion2() {
 	cout << endl;
 
 	int x = 60;
@@ -91,8 +179,9 @@ int main()
 
 	cout << "pX stores:" << *pX << endl; //using * we are going to the address pointed to by pX
 	cout << "pY stores:" << *pY << endl;
+}
 
-	/************************** Revision - Pointers & Dynamic Memory - Exercise 5 ******************************/
+void pointersQuestion5() {
 	cout << endl;
 
 	double* pChocolateConsumption = new double[5];
@@ -105,21 +194,4 @@ int main()
 	double* pMax = getMax(pChocolateConsumption, 5);
 	cout << "Max chocolate consumption for all participants: " << *pMax << endl;
 	delete[] pChocolateConsumption;
-
-	/************************** Revision - Recursion - Exercise 2 ******************************/
-	cout << endl;
-
-	int goalsArray[] = { 5, 0, 7, 1, 4, 8, 100000 };
-	int min = INT_MAX;  //100000
-	int max = INT_MIN;  //-1
-
-	getMinMax(nullptr, 7, 0, min, max);
-
-	cout << "Min: " << min << endl;
-	cout << "Max: " << max << endl;
-
-	/************************** Revision - Recursion - Exercise 5 ******************************/
-	cout << endl;
-
-	//to do...
 }
