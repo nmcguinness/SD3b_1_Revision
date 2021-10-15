@@ -19,12 +19,14 @@ public:
 	string getName() const;
 	double getPrice() const;
 	bool operator==(const Flower& other);
+	void operator+(double delta);
+	void operator++();
 
-	//cout << f1;
+	//friend methods break encapsulation
 	friend ostream& operator<<(ostream& out, const Flower& flower);
 };
 
-//cout << f1 << "," << f2 << ...
+//question 3
 ostream& operator<<(ostream& out, const Flower& flower) {
 	out << flower.name;
 	cout << ",";
@@ -32,6 +34,18 @@ ostream& operator<<(ostream& out, const Flower& flower) {
 	cout << ",";
 	out << flower.price;
 	return out;
+}
+
+//question 4
+//f1 + 1, f1 + 3.4
+void Flower::operator+(double delta) {
+	this->price += delta;
+}
+
+//question 5
+//post-increment (x++), pre-increment(++x)
+void Flower::operator++() {
+	this->petals++;
 }
 
 bool Flower::operator==(const Flower& other)
