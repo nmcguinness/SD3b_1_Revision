@@ -13,13 +13,15 @@ void classesQuestion2();
 void classesQuestion3();
 void classesQuestion4();
 void classesQuestion5();
+void classesTestingExtras();
 
 int main()
 {
 	//classesQuestion2();
 	//classesQuestion3();
-	classesQuestion4();
+	//classesQuestion4();
 	//classesQuestion5();
+	classesTestingExtras();
 
 	/************************** Pass-by-copy and by-reference ******************************/
 	demoSwap();
@@ -159,6 +161,14 @@ void classesQuestion5() {
 	Flower f1("petunia", 4, 1.50);
 	cout << f1 << endl;
 	f1++;
+	cout << f1 << endl;
+}
+
+void classesTestingExtras()
+{
+	Flower f1("petunia", 4, 1.50);
+	cout << f1 << endl;
+	f1 += 10;
 	cout << f1 << endl;
 }
 

@@ -17,14 +17,15 @@ public:
 	Flower(string name, int petals, double price);
 
 	string getName() const;
+	int getPetals() const;
 	double getPrice() const;
-	bool operator==(const Flower& other);
 	void operator+(double delta);
 	void operator++();
-	void operator++(int x);
 
-	//f1 += 2.5
+	//not required by exercises but interesting to consider
+	void operator++(int x);
 	void operator+=(double delta);
+	bool operator==(const Flower& other);
 	bool operator!=(const Flower& other);
 
 	//friend methods break encapsulation

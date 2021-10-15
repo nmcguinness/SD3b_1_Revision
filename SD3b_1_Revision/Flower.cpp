@@ -1,4 +1,5 @@
 #include "Flower.h"
+#include "Utilities.h"
 
 //question 3
 ostream& operator<<(ostream& out, const Flower& flower) {
@@ -27,15 +28,38 @@ void Flower::operator++(int x) {
 	this->petals++;
 }
 
+void Flower::operator+=(double delta)
+{
+	this->price += delta;
+}
+
+bool Flower::operator!=(const Flower& other)
+{
+	//return !(this->name == other.getName()
+	//	&& this->price == other.getPrice());
+
+	//Remember that "this" is a pointer, so if we dereference (*) then we can access the object
+	return !(*this == other);
+}
+
 bool Flower::operator==(const Flower& other)
 {
+	//return this->name == other.getName()
+	//	//TODO - comparing two doubles!
+	//	&& this->price == other.getPrice();
+
+	//Note even though this is a more effective solution we
+	//are not fans of global constants - ESPSILON
 	return this->name == other.getName()
-		//TODO - comparing two doubles!
-		&& this->price == other.getPrice();
+		&& equalsWithin(this->price, other.getPrice(), EPSILON);
 }
 
 string Flower::getName() const {
 	return this->name;
+}
+int Flower::getPetals() const
+{
+	return this->petals;
 }
 double Flower::getPrice() const {
 	return this->price;
