@@ -1,7 +1,9 @@
 #include "pch.h"
 #include "CppUnitTest.h"
+
+//note that we ALSO need to add the CPP include to allow the test project to locate the method definitions
 #include "../SD3b_1_Revision/Flower.h"
-//#include "../SD3b_1_Revision/Flower.cpp"
+#include "../SD3b_1_Revision/Flower.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -26,6 +28,7 @@ namespace TestsRevision
 			Flower f1("petunia", 4, 1.50);
 			Flower f2("petunia", 4, 1.50);
 
+			//the == is calling our overload operator
 			bool areEqual = f1 == f2;
 
 			Assert::AreEqual(areEqual, true);
