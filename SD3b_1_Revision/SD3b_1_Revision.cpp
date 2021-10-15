@@ -17,12 +17,6 @@ void classesTestingExtras();
 
 int main()
 {
-	//classesQuestion2();
-	//classesQuestion3();
-	//classesQuestion4();
-	//classesQuestion5();
-	classesTestingExtras();
-
 	/************************** Pass-by-copy and by-reference ******************************/
 	demoSwap();
 
@@ -41,6 +35,22 @@ int main()
 	//demo showing how to instantiate using pointer
 	cout << "demoArrayInstantiationPounter" << endl;
 	demoArrayInstantiationPounter();
+
+	/************************** Revision - Recursion  ******************************/
+	//Note I havent add code to call the demo methods for Revision and Pointers that you see listed below
+	//If shouldnt represent to big a task for you to call these functions here e.g. recursionQuestion2()
+
+	/************************** Classes & Operator Overloading  ******************************/
+
+	classesQuestion2();
+	classesQuestion3();
+	classesQuestion4();
+	classesQuestion5();
+	classesTestingExtras(); //testing some extra operators I added
+
+	/************************** Revision - Pointers & Dynamic Memory  ******************************/
+	//Note I havent add code to call the demo methods for Revision and Pointers that you see listed below
+	//If shouldnt represent to big a task for you to call these functions here e.g. recursionQuestion2()
 }
 
 /************************** Revision - Pass-by-copy, Pass-by-reference & Arrays ******************************/
